@@ -1,7 +1,10 @@
+// Define the Spoonacular API key as a constant
+const API_KEY = "add your own API from spoonacular";
 
-const API_KEY = "f5414560ee9d4395b3487ce2ee900ce4";
+// Get the HTML element with the ID "recipe-list" and assign it to the recipeListEL variable
 const recipeListEL = document.getElementById("recipe-list");
 
+// Function to display recipes on the webpage
 function displayRecipes(recipes) {
 recipeListEL.innerHTML = ""
 recipes.forEach((recipe) => {
@@ -36,6 +39,7 @@ recipes.forEach((recipe) => {
 });
 
 }
+// Asynchronous function to fetch recipes from the Spoonacular API
 async function getRecipes() {
     const response = await fetch(`https://api.spoonacular.com/recipes/random?number=10&apiKey=${API_KEY}`)
 
@@ -45,7 +49,7 @@ async function getRecipes() {
 
 }
 
-
+// Asynchronous function to initialize the application
 async function init(){
 
     const recipes = await getRecipes();
@@ -53,5 +57,5 @@ async function init(){
    
 
 }
-
+// Call the init function to start the application
 init() ;
