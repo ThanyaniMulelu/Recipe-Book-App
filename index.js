@@ -1,5 +1,5 @@
 // Define the Spoonacular API key as a constant
-const API_KEY = "add your own API from spoonacular";
+const API_KEY = "f5414560ee9d4395b3487ce2ee900ce4";
 
 // Get the HTML element with the ID "recipe-list" and assign it to the recipeListEL variable
 const recipeListEL = document.getElementById("recipe-list");
